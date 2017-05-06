@@ -1,5 +1,22 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
+var player;
+var aliens;
+var bullets;
+var bulletTime = 0;
+var cursors;
+var fireButton;
+var explosions;
+var starfield;
+var score = 0;
+var scoreString = '';
+var scoreText;
+var lives;
+var enemyBullet;
+var firingTimer = 0;
+var stateText;
+var livingEnemies = [];
+
 function preload() {
     game.load.image('bullet', 'assets/games/invaders/bullet.png');
     game.load.image('enemyBullet', 'assets/games/invaders/enemy-bullet.png');
